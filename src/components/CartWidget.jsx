@@ -6,7 +6,7 @@ const CartWidget = () => {
   return (
     <div className="cart-widget">
       <img
-        src="https://images.app.goo.gl/QTsX6Ap5a2Macg1z5" // URL de la imagen
+        src="/image/cart.jpg" // Ruta desde la carpeta public
         alt="Cart"
         className="cart-icon"
       />
@@ -16,5 +16,6 @@ const CartWidget = () => {
 };
 
 export default CartWidget;
+
 
 
