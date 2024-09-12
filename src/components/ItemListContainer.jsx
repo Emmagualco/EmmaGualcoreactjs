@@ -1,8 +1,10 @@
+// src/components/ItemListContainer.jsx
 import React from 'react';
+import './ItemListContainer.css';
 
 const ItemListContainer = ({ greeting }) => {
   return (
-    <div className="container mt-5">
+    <div className="item-list-container">
       <h2>{greeting}</h2>
     </div>
   );
