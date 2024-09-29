@@ -9,22 +9,21 @@ import './index.css';
 const App = () => {
   return (
     <Router>
-      <NavBar />
-      <Routes>
-        {/* Ruta para el catálogo */}
-        <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a E-Spark Scooters!" />} />
-
-        {/* Ruta para filtrar por categorías */}
-        <Route path="/category/:id" element={<ItemListContainer />} />
-
-        {/* Ruta para los detalles de un producto */}
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
-      </Routes>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a E-Spark Scooters!" category="vehiculos" />} />
+          <Route path="/category/vehiculos" element={<ItemListContainer greeting="Vehículos" category="vehiculos" />} />
+          <Route path="/category/accesorios" element={<ItemListContainer greeting="Accesorios" category="accesorios" />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
+      </div>
     </Router>
   );
 };
 
 export default App;
+
 
 
 

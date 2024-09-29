@@ -1,31 +1,35 @@
-[
-    {
-      "id": 1,
-      "name": "Scooter E-Spark 3000",
-      "imageUrl": "/image/573953.jpg",
-      "price": 299.99,
-      "description": "Un scooter eléctrico potente y ecológico, perfecto para la ciudad."
-    },
-    {
-      "id": 2,
-      "name": "Scooter E-Spark 1500",
-      "imageUrl": "/image/Espark.jpg",
-      "price": 199.99,
-      "description": "Scooter ligero y fácil de manejar, ideal para trayectos cortos."
-    },
-    {
-      "id": 3,
-      "name": "Accesorio de Seguridad",
-      "imageUrl": "/image/accessory1.jpg",
-      "price": 29.99,
-      "description": "Casco de seguridad para un viaje seguro en scooter."
-    },
-    {
-      "id": 4,
-      "name": "Kit de Batería E-Spark",
-      "imageUrl": "/image/accessory2.jpg",
-      "price": 89.99,
-      "description": "Kit de batería adicional para extender tu rango de viaje."
-    }
-  ]
+  {
+    "vehiculos": [
+        {
+            "id": 1,
+            "name": "Scooter E-Spark 3000",
+            "imageUrl": "/image/573953.jpg",
+            "price": 299.99,
+            "description": "Un scooter eléctrico potente y ecológico, perfecto para la ciudad."
+          },
+          {
+            "id": 2,
+            "name": "Scooter E-Spark 1500",
+            "imageUrl": "/image/Espark.jpg",
+            "price": 199.99,
+            "description": "Scooter ligero y fácil de manejar, ideal para trayectos cortos."
+          }
+    ],
+    "accesorios": [
+      {
+        "id": 3,
+        "name": "Accesorio de Seguridad",
+        "imageUrl": "/image/accessory1.jpg",
+        "price": 29.99,
+        "description": "Casco de seguridad para un viaje seguro en scooter."
+      },
+      {
+        "id": 4,
+        "name": "Kit de Batería E-Spark",
+        "imageUrl": "/image/accessory2.jpg",
+        "price": 89.99,
+        "description": "Kit de batería adicional para extender tu rango de viaje."
+      }
+    ]
+  }
   
