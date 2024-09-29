@@ -1,27 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { getProductById } from './async-mocks';
+// src/components/ItemListContainer.jsx
+import React from 'react';
+import './ItemListContainer.css';
 
-const ItemDetailContainer = () => {
-  const { itemId } = useParams();
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    getProductById(itemId).then((data) => setProduct(data));
-  }, [itemId]);
-
-  if (!product) {
-    return <p>Cargando producto...</p>;
-  }
-
+const ItemListContainer = ({ greeting }) => {
   return (
-    <div>
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
-      <p>Precio: ${product.price}</p>
+    <div className="item-list-container">
+      <h2>{greeting}</h2>
+      {/* lista de productos en el futuro */}
     </div>
   );
 };
 
-export default ItemDetailContainer;
+export default ItemListContainer;
 

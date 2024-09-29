@@ -1,0 +1,13 @@
+/* src/components/ItemDetailContainer.css */
+.item-detail-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .item-detail-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
