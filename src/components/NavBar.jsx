@@ -10,8 +10,8 @@ const NavBar = () => {
       <Link className="navbar-brand" to="/">E-Spark Scooters</Link>
       <div className="navbar-links">
         <Link className="nav-link" to="/">Inicio</Link>
-        <Link className="nav-link" to="/services">Servicios</Link>
-        <Link className="nav-link" to="/about">Sobre Nosotros</Link>
+        <Link className="nav-link" to="/category/vehiculos">Vehículos</Link>
+        <Link className="nav-link" to="/category/accesorios">Accesorios</Link>
         <Link className="nav-link" to="/contact">Contacto</Link>
       </div>
       <CartWidget />
