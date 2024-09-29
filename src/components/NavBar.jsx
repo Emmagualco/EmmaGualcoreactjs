@@ -1,17 +1,18 @@
 // src/components/NavBar.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';  // Importa Link de react-router-dom
 import CartWidget from './CartWidget';
 import './NavBar.css';
 
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <a className="navbar-brand" href="#">E-Spark Scooters</a>
+      <Link className="navbar-brand" to="/">E-Spark Scooters</Link>
       <div className="navbar-links">
-        <a className="nav-link" href="#">Inicio</a>
-        <a className="nav-link" href="#">Servicios</a>
-        <a className="nav-link" href="#">Sobre Nosotros</a>
-        <a className="nav-link" href="#">Contacto</a>
+        <Link className="nav-link" to="/">Inicio</Link>
+        <Link className="nav-link" to="/services">Servicios</Link>
+        <Link className="nav-link" to="/about">Sobre Nosotros</Link>
+        <Link className="nav-link" to="/contact">Contacto</Link>
       </div>
       <CartWidget />
     </nav>
