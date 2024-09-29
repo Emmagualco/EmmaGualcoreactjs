@@ -7,7 +7,7 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     // Cargar datos de los vehículos y accesorios
-    fetch('/data.json') // Asegúrate de que este archivo esté en la carpeta public
+    fetch('/data.json')
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error al cargar los datos:', error));
