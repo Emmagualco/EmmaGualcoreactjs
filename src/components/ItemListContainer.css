@@ -1,6 +1,25 @@
 /* src/components/ItemListContainer.css */
 .item-list-container {
   padding: 20px;
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
   text-align: center;
+  width: 200px;
+}
+
+.item-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
