@@ -12,8 +12,8 @@ const NavBar = () => {
         <Link className="nav-link" to="/">Inicio</Link>
         <Link className="nav-link" to="/category/vehiculos">Vehículos</Link>
         <Link className="nav-link" to="/category/accesorios">Accesorios</Link>
-        <Link className="nav-link" to="#">Sobre Nosotros</Link>
-        <Link className="nav-link" to="#">Contacto</Link>
+        <Link className="nav-link" to="/about">Sobre Nosotros</Link> {/* Ruta placeholder */}
+        <Link className="nav-link" to="/contact">Contacto</Link> {/* Ruta placeholder */}
       </div>
       <CartWidget />
     </nav>
@@ -21,4 +21,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 

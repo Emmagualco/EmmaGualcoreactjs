@@ -13,9 +13,12 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a E-Spark Scooters!" category="vehiculos" />} />
-          <Route path="/category/vehiculos" element={<ItemListContainer greeting="Vehículos" category="vehiculos" />} />
-          <Route path="/category/accesorios" element={<ItemListContainer greeting="Accesorios" category="accesorios" />} />
+          <Route path="/category/vehiculos" element={<ItemListContainer greeting="¡Explora nuestros vehículos!" category="vehiculos" />} />
+          <Route path="/category/accesorios" element={<ItemListContainer greeting="¡Descubre nuestros accesorios!" category="accesorios" />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
+          {/* Agregar rutas para Sobre Nosotros y Contacto si son necesarias */}
+          <Route path="/about" element={<div>Sobre Nosotros</div>} />
+          <Route path="/contact" element={<div>Contacto</div>} />
         </Routes>
       </div>
     </Router>
@@ -23,6 +26,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
