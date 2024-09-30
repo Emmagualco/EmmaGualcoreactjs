@@ -16,7 +16,6 @@ const App = () => {
           <Route path="/category/vehiculos" element={<ItemListContainer greeting="¡Explora nuestros vehículos!" category="vehiculos" />} />
           <Route path="/category/accesorios" element={<ItemListContainer greeting="¡Descubre nuestros accesorios!" category="accesorios" />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
-          {/* Agregar rutas para Sobre Nosotros y Contacto si son necesarias */}
           <Route path="/about" element={<div>Sobre Nosotros</div>} />
           <Route path="/contact" element={<div>Contacto</div>} />
         </Routes>
@@ -26,6 +25,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 

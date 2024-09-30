@@ -1,5 +1,6 @@
 // src/components/ItemListContainer.jsx
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Importa Link para navegación
 import './ItemListContainer.css';
 
 const ItemListContainer = ({ greeting, category }) => {
@@ -39,8 +40,10 @@ const ItemListContainer = ({ greeting, category }) => {
       <div className="item-list">
         {items.map(item => (
           <div key={item.id} className="item-card">
-            <h3>{item.name}</h3>
-            <img src={item.imageUrl} alt={item.name} />
+            <Link to={`/item/${item.id}`}> {/* Link a la página de detalle del ítem */}
+              <h3>{item.name}</h3>
+              <img src={item.imageUrl} alt={item.name} />
+            </Link>
             <p>Precio: ${item.price}</p>
             <p>{item.description}</p>
             <button className="btn btn-primary">Agregar al Carrito</button>
@@ -52,6 +55,7 @@ const ItemListContainer = ({ greeting, category }) => {
 };
 
 export default ItemListContainer;
+
 
 
 
