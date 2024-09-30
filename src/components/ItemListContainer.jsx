@@ -21,6 +21,21 @@ const ItemListContainer = ({ greeting, category }) => {
   return (
     <div className="item-list-container">
       <h2>{greeting}</h2>
+      <p>
+        Bienvenido a E-Spark Scooters, tu tienda de confianza para scooters eléctricos y accesorios de alta calidad. Explora nuestras categorías a continuación:
+      </p>
+      <div className="category-info">
+        <h3>Categorías Disponibles:</h3>
+        <ul>
+          <li>
+            <strong>Vehículos:</strong> Descubre nuestra amplia gama de scooters eléctricos, diseñados para ofrecerte movilidad, estilo y sostenibilidad.
+          </li>
+          <li>
+            <strong>Accesorios:</strong> Mejora tu experiencia de conducción con nuestros accesorios esenciales, desde cascos de seguridad hasta kits de batería.
+          </li>
+        </ul>
+      </div>
+
       <div className="item-list">
         {items.map(item => (
           <div key={item.id} className="item-card">
@@ -37,5 +52,6 @@ const ItemListContainer = ({ greeting, category }) => {
 };
 
 export default ItemListContainer;
+
 
 
