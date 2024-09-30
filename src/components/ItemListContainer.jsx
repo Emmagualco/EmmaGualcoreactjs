@@ -1,67 +1,45 @@
 // src/components/ItemListContainer.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ItemListContainer.css';
 
-// Datos de ejemplo
-const vehicles = [
-  {
-    id: 1,
-    name: 'Scooter Eléctrico A',
-    imageUrl: '/image/scooterA.jpg', // Asegúrate de que la ruta sea correcta
-    price: 1200,
-    description: 'Scooter eléctrico eficiente y moderno.'
-  },
-  {
-    id: 2,
-    name: 'Scooter Eléctrico B',
-    imageUrl: '/image/scooterB.jpg',
-    price: 1500,
-    description: 'Scooter eléctrico con mayor autonomía.'
-  },
-];
+const ItemListContainer = ({ greeting, category }) => {
+  const [items, setItems] = useState([]);
 
-const accessories = [
-  {
-    id: 1,
-    name: 'Casco de Seguridad',
-    imageUrl: '/image/casco.jpg',
-    price: 50,
-    description: 'Casco de seguridad certificado.'
-  },
-  {
-    id: 2,
-    name: 'Guantes de Protección',
-    imageUrl: '/image/guantes.jpg',
-    price: 30,
-    description: 'Guantes cómodos y duraderos.'
-  },
-];
-
-const ItemListContainer = ({ greeting, section }) => {
-  // Determinar qué datos mostrar según la sección
-  const itemsToShow = section === 'vehicles' ? vehicles : accessories;
+  useEffect(() => {
+    // Cargar datos desde el archivo JSON
+    fetch('/data.json')
+      .then(response => response.json())
+      .then(data => {
+        if (category === 'vehiculos') {
+          setItems(data.vehiculos);
+        } else if (category === 'accesorios') {
+          setItems(data.accesorios);
+        }
+      });
+  }, [category]);
 
   return (
     <div className="item-list-container">
       <h2>{greeting}</h2>
+      <p>
+        Bienvenido a E-Spark Scooters, tu tienda de confianza para scooters eléctricos y accesorios de alta calidad. Explora nuestras categorías a continuación:
+      </p>
       <div className="category-info">
-        {section === 'vehicles' && (
-          <>
-            <h3>Vehículos</h3>
-            <p>Explora nuestra variedad de scooters eléctricos diseñados para un transporte eficiente y sostenible.</p>
-          </>
-        )}
-        {section === 'accessories' && (
-          <>
-            <h3>Accesorios</h3>
-            <p>Encuentra todos los accesorios necesarios para mejorar tu experiencia con los scooters.</p>
-          </>
-        )}
+        <h3>Categorías Disponibles:</h3>
+        <ul>
+          <li>
+            <strong>Vehículos:</strong> Descubre nuestra amplia gama de scooters eléctricos, diseñados para ofrecerte movilidad, estilo y sostenibilidad.
+          </li>
+          <li>
+            <strong>Accesorios:</strong> Mejora tu experiencia de conducción con nuestros accesorios esenciales, desde cascos de seguridad hasta kits de batería.
+          </li>
+        </ul>
       </div>
+
       <div className="item-list">
-        {itemsToShow.map(item => (
-          <div className="item-card" key={item.id}>
-            <h4>{item.name}</h4>
+        {items.map(item => (
+          <div key={item.id} className="item-card">
+            <h3>{item.name}</h3>
             <img src={item.imageUrl} alt={item.name} />
             <p>Precio: ${item.price}</p>
             <p>{item.description}</p>
