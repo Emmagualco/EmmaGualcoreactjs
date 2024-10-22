@@ -1,6 +1,7 @@
 // src/components/Checkout.jsx
 import React, { useContext } from 'react';
-import { CartContext } from '../CartContext';
+import { CartContext } from "./contexts/CartContext";
+
 
 const Checkout = () => {
   const { cartItems, totalAmount } = useContext(CartContext); // Obtener datos del contexto

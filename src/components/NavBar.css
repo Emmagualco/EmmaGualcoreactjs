@@ -22,9 +22,23 @@
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+  transition: color 0.3s ease; /* Transición suave para el color */
 }
 
 .nav-link:hover {
   text-decoration: underline;
+  color: #f1c40f; /* Cambiar color al pasar el mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+    align-items: flex-start; /* Alinear a la izquierda */
+  }
+  .navbar-links {
+    flex-direction: column; /* Cambiar a una columna */
+    gap: 10px; /* Espaciado entre enlaces */
+  }
 }
 
