@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Checkout from './components/Checkout'; // Asegúrate de tener este componente
 import './index.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/category/vehiculos" element={<ItemListContainer greeting="¡Explora nuestros vehículos!" category="vehiculos" />} />
           <Route path="/category/accesorios" element={<ItemListContainer greeting="¡Descubre nuestros accesorios!" category="accesorios" />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/checkout" element={<Checkout />} /> {/* Ruta al componente de Checkout */}
           <Route path="/about" element={<div>Sobre Nosotros</div>} />
           <Route path="/contact" element={<div>Contacto</div>} />
         </Routes>

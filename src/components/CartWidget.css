@@ -1,21 +1,23 @@
 /* src/components/CartWidget.css */
 .cart-widget {
-  display: flex;
-  align-items: center;
+  position: relative;
+  display: inline-block;
 }
 
 .cart-icon {
-  width: 24px;
-  height: 24px;
+  width: 40px; /* Ajusta el tamaño según tu diseño */
+  height: auto;
 }
 
 .badge {
-  font-size: 1rem;
-  background-color: #f1c40f; /* Color del badge */
-  color: #343a40; /* Texto oscuro */
+  position: absolute;
+  top: -5px; /* Ajusta la posición según tu diseño */
+  right: -10px; /* Ajusta la posición según tu diseño */
+  background-color: #f1c40f; /* Color dorado que elegiste */
+  color: #000; /* Color del texto */
   border-radius: 50%;
   padding: 5px 10px;
-  margin-left: 8px;
+  font-size: 12px; /* Ajusta el tamaño de la fuente */
 }
 
 

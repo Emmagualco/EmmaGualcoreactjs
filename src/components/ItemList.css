@@ -1,0 +1,29 @@
+/* src/components/ItemList.css */
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .item-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .item-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .btn {
+    background-color: #f1c40f; /* Color dorado que elegiste */
+    color: #000; /* Color del texto */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
